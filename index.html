@@ -19,11 +19,9 @@
 				datasend_timeout:10,
 				source_channel:['efwe','sgh'],
 				heatmap: {
-			//是否开启点击图，default 表示开启，自动采集 $WebClick 事件，可以设置 'not_collect' 表示关闭。
-			clickmap:'default',
-			//是否开启触达注意力图，not_collect 表示关闭，不会自动采集 $WebStay 事件，可以设置 'default' 表示开启。
-			scroll_notice_map:'default',
-			get_vtrack_config: false
+					collect_tags:{
+              div : true
+        }
 
 
 		 }
@@ -114,7 +112,7 @@
 				用户关联（login）
 			</div>
       <button >btn</button>
-			<div style="width: 100px;height: 100px;background-color: aquamarine;"></div>
+			<div style="width: 100px;height: 100px;background-color: aquamarine;background-image: url(./qq/12.jpeg)"></div>
 			<input type="text" name="" id="wya">
 			<a href="https://chzzprjrs.github.io/" target="_black">
 				<div>
