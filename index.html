@@ -8,7 +8,12 @@
 	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 	<title>https的test111</title>
   <!-- 同步载入 -->
-	<script charset='UTF-8' src="https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.18.11/sensorsdata.min.js"></script>
+	<script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
+<script>
+  // VConsole will be exported to `window.VConsole` by default.
+  var vConsole = new window.VConsole();
+</script>
+	<script charset='UTF-8' src="https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.19.2/sensorsdata.min.js"></script>
 	<script charset="UTF-8">
 		var sensors = window['sensorsDataAnalytic201505'];
 		sensors.init({
