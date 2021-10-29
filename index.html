@@ -38,6 +38,11 @@ console.log(sensors.quick)
 		sensors.registerPage({
 		appName:'abcd'
 		})
+		sensors.use('SiteLinker',
+                {linker: [
+                  {part_url: 'http://www.wy.com:2233/index.html', after_hash: false}
+                ]}
+            );
     sensors.quick('autoTrack',{
 			$latest_referrer:'aefwfg'
 		},function(){
