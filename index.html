@@ -53,6 +53,15 @@ console.log(sensors.quick)
 		},function(){
 			console.log('lalal')
 		});
+		sensors.quick('useAppPlugin', {
+        deeplink: function(deeplink) {
+          deeplink.init({timeout: 2900}); // 等待唤起 App 的时间，默认 3000 ms
+          document.getElementById('theBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            deeplink.openDeepLink();
+          });
+        }
+});
 	</script>
 	<style>
 		html,
@@ -101,6 +110,7 @@ console.log(sensors.quick)
 	<div id="wrap">
 		<header></header>
 		<section>
+			<button id='theBtn'>12455</button>
 			<a href='#qq'>215</a>
 			<div id="track1" class="topbar">
 				内嵌标签test：
