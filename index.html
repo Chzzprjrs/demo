@@ -13,14 +13,16 @@
   // VConsole will be exported to `window.VConsole` by default.
   var vConsole = new window.VConsole();
 </script>
-	<script charset='UTF-8' src="https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.19.8/sensorsdata.min.js"></script>
+	<script charset='UTF-8' src="https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.14.22/sensorsdata.min.js"></script>
 	<script charset="UTF-8">
 		var sensors = window['sensorsDataAnalytic201505'];
 		sensors.init({
 				server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=production',
-				is_track_single_page:true,
-				use_client_time:true,
-				send_type:'beacon',
+					batch_send:{
+					datasend_timeout: 6000,
+one_send_max_length: 30,
+send_interval: 10000
+				},
 				datasend_timeout:10,
 				source_channel:['efwe','sgh'],
 				heatmap: {
