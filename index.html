@@ -18,12 +18,6 @@
 		var sensors = window['sensorsDataAnalytic201505'];
 		sensors.init({
 				server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=production',
-					batch_send:{
-					datasend_timeout: 6000,
-one_send_max_length: 30,
-send_interval: 10000
-				},
-				datasend_timeout:10,
 				source_channel:['efwe','sgh'],
 				heatmap: {
 					collect_tags:{
@@ -33,25 +27,22 @@ send_interval: 10000
 
 		 }
 			});
-console.log(sensors.quick)
-			sensors.setProfile({
-				namefw:'aefgw'
-			})
-		sensors.registerPage({
-		appName:'abcd',
-			abfvrg:'wrg',
-			asrg:'rgeath'
-		})
-		sensors.register({
-			srhth:'12352'
-		})
 		
     sensors.quick('autoTrack',{
 			$latest_referrer:'aefwfg'
 		},function(){
 			console.log('lalal')
 		});
-    
+        sensors.quick('useAppPlugin', {
+        deeplink: function(deeplink) {
+          deeplink.init({timeout: 2900}); // 等待唤起 App 的时间，默认 3000 ms
+          document.getElementById('theBtn11').addEventListener('click', function(e) {
+		  console.log(1234)
+            e.preventDefault();
+            deeplink.openDeepLink();
+          });
+        }
+});
 	</script>
 	<style>
 		html,
@@ -100,7 +91,7 @@ console.log(sensors.quick)
 	<div id="wrap">
 		<header></header>
 		<section>
-			<button id='theBtn'>12455</button>
+			<button id='theBtn11'>唤起app</button>
 			<a href='#qq'>215</a>
 			<div id="track1" class="topbar">
 				内嵌标签test：
