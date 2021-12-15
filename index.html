@@ -17,7 +17,9 @@
 	<script charset="UTF-8">
 		var sensors = window['sensorsDataAnalytic201505'];
 		sensors.init({
-				server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=production',
+				server_url: 'https://applog.ctsec.com/sa',
+			send_type:'beacon',
+			show_log:true,
 				source_channel:['efwe','sgh'],
 				heatmap: {
 					collect_tags:{
