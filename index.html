@@ -17,7 +17,7 @@
 	<script charset="UTF-8">
 		var sensors = window['sensorsDataAnalytic201505'];
 		sensors.init({
-				server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=production',
+				server_url: 'https://sensors.hetao101.com/sa?project=production',
 			send_type:'beacon',
 			show_log:true,
 				source_channel:['efwe','sgh'],
@@ -30,11 +30,7 @@
 		 }
 			});
 		
-    sensors.quick('autoTrack',{
-			$latest_referrer:'aefwfg'
-		},function(){
-			console.log('lalal')
-		});
+    sensors.quick('autoTrack');
        
 	</script>
 	<style>
